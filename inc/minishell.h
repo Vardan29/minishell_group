@@ -10,5 +10,6 @@
 # include "hash_table.h"
 # include "converters.h"
 # include "builtins.h"
+# include "parsing.h"
 
 #endif

@@ -47,7 +47,7 @@ struct s_positions
 
 struct s_token_arr
 {
-	t_token	*arr;
+	t_token	arr[10000];
 	size_t	size;
 };
 

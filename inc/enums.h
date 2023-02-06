@@ -4,7 +4,9 @@
 enum	e_token_type
 {
 	WORD,
-	SYMBOL
+	SYMBOL,
+	SINGLE_QUOTE,
+	DOUBLE_QUOTE
 };
 
 #endif

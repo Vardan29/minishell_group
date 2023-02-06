@@ -14,7 +14,7 @@ void		remove_node(t_ht *map, t_ht_node *node, t_ht_node *prev,
 				size_t index);
 
 bool		is_quote(char c);
-bool		is_simbol(char c);
+bool		is_symbol(char c);
 bool		check_double_char(char *input, int it_pos, char dc[2]);
 
 t_ht_node	*find_node(t_ht *map, const char *key,
