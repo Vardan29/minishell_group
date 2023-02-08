@@ -1,7 +1,7 @@
 #include "minishell.h"
 
 t_token	create_token(t_positions positions, t_token	token,
-			char *value, int type)
+			char *value, t_token_type type)
 {
 	token.type = type;
 	ft_strcpy(token.value, value);
@@ -9,7 +9,7 @@ t_token	create_token(t_positions positions, t_token	token,
 	if (type != WORD)
 		*positions.cur_pos += ft_strlen(value);
 	if (type == SINGLE_QUOTE || type == DOUBLE_QUOTE)
-		++*positions.cur_pos;
+		*positions.cur_pos += 2;
 	return (token);
 }
 

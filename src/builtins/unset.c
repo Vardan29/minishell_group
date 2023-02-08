@@ -1,6 +1,9 @@
 #include "minishell.h"
 
-void	unset(t_ht *map, const char *key)
+void	unset(char **options, char **args, t_ht *map)
 {
-	ht_remove_entry(map, key);
+	(void)map;
+	(void)args;
+	(void)options;
+	ht_remove_entry(map, args[0]);
 }

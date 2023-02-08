@@ -1,6 +1,7 @@
 #include "minishell.h"
 
-void	export(t_ht *map, const char *key, void *value)
+void	export(char **options, char **args, t_ht *map)
 {
-	ht_set(map, key, value);
+	(void)options;
+	ht_set(map, args[0], args[1]);
 }

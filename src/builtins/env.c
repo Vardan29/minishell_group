@@ -1,10 +1,12 @@
 #include "minishell.h"
 
-void	env(t_ht *map)
+void	env(char **options, char **args, t_ht *map)
 {
 	t_ht_node	*node;
 	size_t		i;
 
+	(void)options;
+	(void)args;
 	i = -1;
 	while (++i < map->size)
 	{
