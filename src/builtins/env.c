@@ -13,7 +13,7 @@ void	env(char **options, char **args, t_ht *map)
 		node = map->table[i];
 		while (node != NULL)
 		{
-			printf("%s=%s\n", node->key, node->value);
+			printf("%s=%s\n", node->key, (char *)node->value);
 			node = node->next;
 		}
 	}

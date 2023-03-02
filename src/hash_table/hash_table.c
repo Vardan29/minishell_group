@@ -35,7 +35,7 @@ void	ht_set(t_ht *map, const char *key, void *value)
 	map->num_elements++;
 }
 
-void	*ht_get(t_ht *map, const char *key)
+t_builtin_func  ht_get(t_ht *map, const char *key)
 {
 	size_t		index;
 	t_ht_node	*node;

@@ -1,7 +1,7 @@
 #ifndef HASH_TABLE_H
 # define HASH_TABLE_H
 
-typedef void (*t_builtin_func)(char **options, char **args, t_ht *map);
+# include "types.h"
 
 t_builtin_func  ht_get(t_ht *map, const char *key);
 size_t         	ht_hash(const char *key, int size);

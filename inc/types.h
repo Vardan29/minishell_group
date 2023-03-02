@@ -12,6 +12,8 @@ typedef struct s_positions		t_positions;
 typedef struct s_cw_token		t_cw_token;
 typedef struct s_token_arr		t_token_arr;
 typedef struct s_working_tokens	t_working_tokens;
+typedef void (*t_builtin_func)(char **options, char **args, t_ht *map);
+
 
 struct s_ht_node
 {
@@ -30,7 +32,7 @@ struct s_ht
 struct s_token
 {
 	t_token_type	type;
-	char			value[MAX_TOKEN_LEN];
+	char			*value;
 };
 
 struct s_input
@@ -47,13 +49,13 @@ struct s_positions
 
 struct s_token_arr
 {
-	t_token	arr[10000];
+	t_token	*arr;
 	size_t	size;
 };
 
 struct s_cw_token
 {
-	char	token[MAX_TOKEN_LEN];
+	char	*token;
 	size_t	size;
 };
 
